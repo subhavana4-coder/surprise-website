@@ -2,43 +2,55 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Birthday Surprise ❤️</title>
 
 <style>
+
 body{
-font-family:Arial;
-text-align:center;
-background:#ffe6f0;
+margin:0;
 padding:20px;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#fff0f5);
+text-align:center;
 }
 
 .container{
 max-width:700px;
 margin:auto;
 background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 0 15px rgba(0,0,0,0.2);
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.15);
 }
 
 img{
-max-width:100%;
-border-radius:15px;
+width:100%;
+border-radius:20px;
 }
 
 input{
-padding:10px;
 width:80%;
-margin:10px;
+padding:12px;
+font-size:16px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ccc;
 }
 
 button{
-padding:10px 20px;
 background:#ff4d88;
 color:white;
 border:none;
-border-radius:10px;
+padding:12px 25px;
+border-radius:12px;
+font-size:16px;
 cursor:pointer;
+}
+
+button:hover{
+opacity:0.9;
 }
 
 .hidden{
@@ -47,8 +59,18 @@ display:none;
 
 video{
 width:100%;
-border-radius:15px;
+border-radius:20px;
 }
+
+h1{
+color:#ff3366;
+}
+
+p{
+font-size:18px;
+line-height:1.7;
+}
+
 </style>
 </head>
 
@@ -56,79 +78,213 @@ border-radius:15px;
 
 <div class="container">
 
+<!-- START PAGE -->
+
 <div id="start">
+
 <img src="cake.jpg">
+
 <h1>A Small Surprise For You ❤️</h1>
+
+<p>
+Hey Bava ❤️<br>
+I made something special just for you...
+</p>
+
 <button onclick="showQ1()">Start Journey</button>
+
 </div>
+
+<!-- QUESTION 1 -->
 
 <div id="q1" class="hidden">
+
 <h2>When did you send me your first message?</h2>
-<p>Hint: Independence month and Independence Day minus 5</p>
+
+<p>
+Hint: Independence month and Independence Day minus 5
+</p>
+
 <input id="a1">
+
 <br>
+
 <button onclick="check1()">Submit</button>
+
 <p id="m1"></p>
+
 </div>
+
+<!-- QUESTION 2 -->
 
 <div id="q2" class="hidden">
+
 <h2>When did we kiss for the first time?</h2>
-<p>Hint: First meet</p>
+
+<p>
+Hint: First meet
+</p>
+
 <input id="a2">
+
 <br>
+
 <button onclick="check2()">Submit</button>
+
 <p id="m2"></p>
+
 </div>
+
+<!-- QUESTION 3 -->
 
 <div id="q3" class="hidden">
+
 <h2>My birthday date?</h2>
-<p>Hint: After Gandhi Jayanti add 2</p>
+
+<p>
+Hint: After Gandhi Jayanti add 2
+</p>
+
 <input id="a3">
+
 <br>
+
 <button onclick="check3()">Submit</button>
+
 <p id="m3"></p>
+
 </div>
+
+<!-- QUESTION 4 -->
 
 <div id="q4" class="hidden">
+
 <h2>My new phone number?</h2>
+
+<p>
+Hint: 960646 + your birthday and my birthday
+</p>
+
 <input id="a4">
+
 <br>
+
 <button onclick="check4()">Submit</button>
+
 <p id="m4"></p>
+
 </div>
 
-<div id="final" class="hidden">
+<!-- YOUR PHOTO -->
 
-<h1>Happy Birthday Bava ❤️🎂</h1>
+<div id="final1" class="hidden">
+
+<h1>This is the girl who loves you the most ❤️</h1>
 
 <img src="myphoto.jpg">
+
 <br><br>
+
+<button onclick="showFinal2()">Next ➜</button>
+
+</div>
+
+<!-- HIS PHOTO -->
+
+<div id="final2" class="hidden">
+
+<h1>And this is the handsome birthday boy 🎂❤️</h1>
 
 <img src="hisphoto.jpg">
 
+<br><br>
+
+<button onclick="showFinal3()">Next ➜</button>
+
+</div>
+
+<!-- MESSAGE -->
+
+<div id="final3" class="hidden">
+
+<h1>A Message For You ❤️</h1>
+
 <p>
+
+Happy Birthday Bava ❤️🎂
+
+<br><br>
+
 Every moment with you is special.
 Thank you for being part of my life and
 for bringing happiness into my world.
+
 <br><br>
 
-Hold my hand and I will make you happy double. ❤️
+Hold my hand and I will make you happy double ❤️
+
 <br><br>
 
 My last and forever wish is this:
-Please make my parents happy and always
-take care of my family too. 🫂❤️
+
+Please take care ypurself,
+and make my parents happy,
+whether I am alive or not,
+and always take care of my family too as like your family 🫂❤️
+
 <br><br>
 
-I love you so much.
+You mean so much to me.
+
+I love you so much ❤️
+
 <br><br>
 
-A Very Happy Birthday ❤️🎉
+A Very Happy Birthday 🎉❤️
+
 </p>
 
+<button onclick="showFinal4()">One Last Surprise 🎁</button>
+
+</div>
+
+<!-- VIDEO -->
+
+<div id="final4" class="hidden">
+
+<h1>Now Watch This Till The End ❤️</h1>
+
 <video controls autoplay>
+
 <source src="birthday.mp4" type="video/mp4">
+
 </video>
+
+<br><br>
+
+<button onclick="showFinal5()">Next ➜</button>
+
+</div>
+
+<!-- FINAL PAGE -->
+
+<div id="final5" class="hidden">
+
+<h1>Thank You For Watching ❤️</h1>
+
+<h2>Once Again...</h2>
+
+<h1>Happy Birthday Bava 🎂❤️</h1>
+
+<p>
+
+May all your dreams come true ✨
+
+<br><br>
+
+I Love You ❤️
+
+</p>
 
 </div>
 
@@ -137,55 +293,110 @@ A Very Happy Birthday ❤️🎉
 <script>
 
 function showQ1(){
+
 document.getElementById("start").classList.add("hidden");
 document.getElementById("q1").classList.remove("hidden");
+
 }
 
 function check1(){
+
 let a=document.getElementById("a1").value.toLowerCase().trim();
 
-if(a=="10 august"||a=="august 10"){
+if(a=="10 august" || a=="august 10"){
+
 document.getElementById("q1").classList.add("hidden");
 document.getElementById("q2").classList.remove("hidden");
+
 }else{
+
 document.getElementById("m1").innerHTML="Wrong dude 😜";
+
 }
+
 }
 
 function check2(){
+
 let a=document.getElementById("a2").value.toLowerCase().trim();
 
-if(a=="14 november"||a=="november 14"){
+if(a=="14 november" || a=="november 14"){
+
 document.getElementById("q2").classList.add("hidden");
 document.getElementById("q3").classList.remove("hidden");
+
 }else{
+
 document.getElementById("m2").innerHTML="Wrong dude 😜";
+
 }
+
 }
 
 function check3(){
+
 let a=document.getElementById("a3").value.toLowerCase().trim();
 
-if(a=="4 october"||a=="october 4"){
+if(a=="4 october" || a=="october 4"){
+
 document.getElementById("q3").classList.add("hidden");
 document.getElementById("q4").classList.remove("hidden");
+
 }else{
+
 document.getElementById("m3").innerHTML="Wrong dude 😜";
+
 }
+
 }
 
 function check4(){
+
 let a=document.getElementById("a4").value.trim();
 
 if(a=="9606462604"){
+
 document.getElementById("q4").classList.add("hidden");
-document.getElementById("final").classList.remove("hidden");
+document.getElementById("final1").classList.remove("hidden");
+
 }else{
+
 document.getElementById("m4").innerHTML="Wrong dude 😜";
+
 }
+
+}
+
+function showFinal2(){
+
+document.getElementById("final1").classList.add("hidden");
+document.getElementById("final2").classList.remove("hidden");
+
+}
+
+function showFinal3(){
+
+document.getElementById("final2").classList.add("hidden");
+document.getElementById("final3").classList.remove("hidden");
+
+}
+
+function showFinal4(){
+
+document.getElementById("final3").classList.add("hidden");
+document.getElementById("final4").classList.remove("hidden");
+
+}
+
+function showFinal5(){
+
+document.getElementById("final4").classList.add("hidden");
+document.getElementById("final5").classList.remove("hidden");
+
 }
 
 </script>
 
 </body>
+</html>
 </html>
