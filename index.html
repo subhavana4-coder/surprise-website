@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Birthday Surprise ❤️</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#ffe6f0;
+padding:20px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+img{
+max-width:100%;
+border-radius:15px;
+}
+
+input{
+padding:10px;
+width:80%;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+background:#ff4d88;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.hidden{
+display:none;
+}
+
+video{
+width:100%;
+border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="start">
+<img src="cake.jpg">
+<h1>A Small Surprise For You ❤️</h1>
+<button onclick="showQ1()">Start Journey</button>
+</div>
+
+<div id="q1" class="hidden">
+<h2>When did you send me your first message?</h2>
+<p>Hint: Independence month and Independence Day minus 5</p>
+<input id="a1">
+<br>
+<button onclick="check1()">Submit</button>
+<p id="m1"></p>
+</div>
+
+<div id="q2" class="hidden">
+<h2>When did we kiss for the first time?</h2>
+<p>Hint: First meet</p>
+<input id="a2">
+<br>
+<button onclick="check2()">Submit</button>
+<p id="m2"></p>
+</div>
+
+<div id="q3" class="hidden">
+<h2>My birthday date?</h2>
+<p>Hint: After Gandhi Jayanti add 2</p>
+<input id="a3">
+<br>
+<button onclick="check3()">Submit</button>
+<p id="m3"></p>
+</div>
+
+<div id="q4" class="hidden">
+<h2>My new phone number?</h2>
+<input id="a4">
+<br>
+<button onclick="check4()">Submit</button>
+<p id="m4"></p>
+</div>
+
+<div id="final" class="hidden">
+
+<h1>Happy Birthday Bava ❤️🎂</h1>
+
+<img src="myphoto.jpg">
+<br><br>
+
+<img src="hisphoto.jpg">
+
+<p>
+Every moment with you is special.
+Thank you for being part of my life and
+for bringing happiness into my world.
+<br><br>
+
+Hold my hand and I will make you happy double. ❤️
+<br><br>
+
+My last and forever wish is this:
+Please make my parents happy and always
+take care of my family too. 🫂❤️
+<br><br>
+
+I love you so much.
+<br><br>
+
+A Very Happy Birthday ❤️🎉
+</p>
+
+<video controls autoplay>
+<source src="birthday.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</div>
+
+<script>
+
+function showQ1(){
+document.getElementById("start").classList.add("hidden");
+document.getElementById("q1").classList.remove("hidden");
+}
+
+function check1(){
+let a=document.getElementById("a1").value.toLowerCase().trim();
+
+if(a=="10 august"||a=="august 10"){
+document.getElementById("q1").classList.add("hidden");
+document.getElementById("q2").classList.remove("hidden");
+}else{
+document.getElementById("m1").innerHTML="Wrong dude 😜";
+}
+}
+
+function check2(){
+let a=document.getElementById("a2").value.toLowerCase().trim();
+
+if(a=="14 november"||a=="november 14"){
+document.getElementById("q2").classList.add("hidden");
+document.getElementById("q3").classList.remove("hidden");
+}else{
+document.getElementById("m2").innerHTML="Wrong dude 😜";
+}
+}
+
+function check3(){
+let a=document.getElementById("a3").value.toLowerCase().trim();
+
+if(a=="4 october"||a=="october 4"){
+document.getElementById("q3").classList.add("hidden");
+document.getElementById("q4").classList.remove("hidden");
+}else{
+document.getElementById("m3").innerHTML="Wrong dude 😜";
+}
+}
+
+function check4(){
+let a=document.getElementById("a4").value.trim();
+
+if(a=="9606462604"){
+document.getElementById("q4").classList.add("hidden");
+document.getElementById("final").classList.remove("hidden");
+}else{
+document.getElementById("m4").innerHTML="Wrong dude 😜";
+}
+}
+
+</script>
+
+</body>
+</html>
